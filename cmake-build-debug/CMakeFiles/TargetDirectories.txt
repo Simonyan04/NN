@@ -1,0 +1,3 @@
+/Users/armansimonyan/CLionProjects/NN/cmake-build-debug/CMakeFiles/NN.dir
+/Users/armansimonyan/CLionProjects/NN/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/armansimonyan/CLionProjects/NN/cmake-build-debug/CMakeFiles/rebuild_cache.dir
