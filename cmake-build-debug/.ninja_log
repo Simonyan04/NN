@@ -1,8 +1,0 @@
-# ninja log v6
-1	140	1735776642479952476	CMakeFiles/NN.dir/UI.c.o	a0c2b8b7fbfcba0c
-2	248	1735672602884952078	CMakeFiles/NN.dir/image_up.c.o	1f3358b201936bb0
-2	50	1735736257687644803	CMakeFiles/NN.dir/sin.c.o	17b4f26aba68253
-1	163	1735664639418076654	CMakeFiles/NN.dir/main.c.o	89abbbd76c2ced8b
-0	194	1735774571555663619	CMakeFiles/NN.dir/function_approximation.c.o	b490be85f583ab2b
-1	48	1735777256687009040	build.ninja	e7bcfe4f5f420c65
-141	261	1735776642619190322	NN	e0cce8dc5a2bc214
