@@ -1,0 +1,9 @@
+# ninja log v6
+2	300	1736125871918941316	CMakeFiles/NN.dir/src/number_recognizer/UI.c.o	31c8f58b6b0d4d56
+8	304	1736125734255451269	CMakeFiles/NN.dir/src/image_up.c.o	7e2163d353a2ddf8
+1	90	1736125592563081518	CMakeFiles/NN.dir/src/function_approximation.c.o	4d72fc037146f792
+1	107	1736125592562772766	CMakeFiles/NN.dir/src/adder/sum.c.o	bcdaf5ed87f0ffa5
+2	296	1736126489142674681	CMakeFiles/NN.dir/src/number_recognizer/number.c.o	a428f924b9815456
+2	91	1736125592564053773	CMakeFiles/NN.dir/src/xor.c.o	1f1ed1dfba6cf6d6
+2	123	1736126569661704044	build.ninja	e7bcfe4f5f420c65
+296	480	1736126489436350961	/Users/armansimonyan/CLionProjects/NN/bin/NN	a1708209ab6c1a98
