@@ -16,7 +16,7 @@ typedef struct {
 }Point;
 
 float function(float x) {
-    return 2*x;
+    return sinf(x) + cosf(x);
 }
 
 Point min_max(const Point* points, size_t n) {
@@ -79,7 +79,7 @@ void input_output(NN_Matrix* in, NN_Matrix* out, const Point* points, size_t n){
 
 
 int main(){
-    size_t arch[] = {1, 3, 3, 1};
+    size_t arch[] = {1, 12, 1};
 
 
     NN nn = nn_alloc(arch, ARRAY_LEN(arch));
@@ -94,8 +94,8 @@ int main(){
     NN_Matrix out = matrix_alloc(0,0);
 
 
-    float a = 1; float b = 2;
-    int n = 25;
+    float a = -3; float b = 3;
+    int n = 40;
 
     Point points[n];
     normal_function_points(function, a, b, points, n);
@@ -113,10 +113,11 @@ int main(){
         BeginDrawing();
         ClearBackground(BLACK);
 
-
-        nn_back_propagation(nn, gradient, in, out);
-        nn_learn(nn, gradient, 1);
-        printf("%f\n", nn_cost(nn, in, out));
+        for (int i = 0; i < 1000; i++) {
+            nn_back_propagation(nn, gradient, in, out);
+            nn_learn(nn, gradient, 1);
+            printf("%f\n", nn_cost(nn, in, out));
+        }
 
         interpolated_points(nn, nn_points, WIDTH);
         normal_function_points(function, a, b, real_points, WIDTH);

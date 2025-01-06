@@ -8,7 +8,7 @@ set(CMAKE_C_STANDARD 11)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/libs)
 
-add_executable(${PROJECT_NAME} src/number_recognizer/number.c)
+add_executable(${PROJECT_NAME} src/function_approximation.c)
 
 find_package(raylib REQUIRED)
 

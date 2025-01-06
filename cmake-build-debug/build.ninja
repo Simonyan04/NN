@@ -49,12 +49,12 @@ cmake_ninja_workdir = /Users/armansimonyan/CLionProjects/NN/cmake-build-debug/
 
 build cmake_object_order_depends_target_NN: phony || .
 
-build CMakeFiles/NN.dir/src/number_recognizer/number.c.o: C_COMPILER__NN_unscanned_Debug /Users/armansimonyan/CLionProjects/NN/src/number_recognizer/number.c || cmake_object_order_depends_target_NN
-  DEP_FILE = CMakeFiles/NN.dir/src/number_recognizer/number.c.o.d
+build CMakeFiles/NN.dir/src/function_approximation.c.o: C_COMPILER__NN_unscanned_Debug /Users/armansimonyan/CLionProjects/NN/src/function_approximation.c || cmake_object_order_depends_target_NN
+  DEP_FILE = CMakeFiles/NN.dir/src/function_approximation.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -I/opt/homebrew/Cellar/raylib/5.5/include
   INCLUDES = -I/Users/armansimonyan/CLionProjects/NN/include -I/Users/armansimonyan/CLionProjects/NN/libs -F/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/System/Library/Frameworks -isystem /opt/homebrew/Cellar/raylib/5.5/include
   OBJECT_DIR = CMakeFiles/NN.dir
-  OBJECT_FILE_DIR = CMakeFiles/NN.dir/src/number_recognizer
+  OBJECT_FILE_DIR = CMakeFiles/NN.dir/src
 
 
 # =============================================================================
@@ -64,7 +64,7 @@ build CMakeFiles/NN.dir/src/number_recognizer/number.c.o: C_COMPILER__NN_unscann
 #############################################
 # Link the executable /Users/armansimonyan/CLionProjects/NN/bin/NN
 
-build /Users/armansimonyan/CLionProjects/NN/bin/NN: C_EXECUTABLE_LINKER__NN_Debug CMakeFiles/NN.dir/src/number_recognizer/number.c.o | /opt/homebrew/Cellar/raylib/5.5/lib/libraylib.dylib
+build /Users/armansimonyan/CLionProjects/NN/bin/NN: C_EXECUTABLE_LINKER__NN_Debug CMakeFiles/NN.dir/src/function_approximation.c.o | /opt/homebrew/Cellar/raylib/5.5/lib/libraylib.dylib
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
   LINK_LIBRARIES = /opt/homebrew/Cellar/raylib/5.5/lib/libraylib.dylib  -framework Cocoa  -framework IOKit  -framework CoreVideo  -framework OpenGL  -L/opt/homebrew/Cellar/raylib/5.5/lib -lraylib
   OBJECT_DIR = CMakeFiles/NN.dir
