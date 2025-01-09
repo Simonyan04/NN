@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <stdint.h>
 
 #define ARRAY_LEN(da) sizeof(da)/sizeof(da[0])
 
