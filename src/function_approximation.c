@@ -16,7 +16,7 @@ typedef struct {
 }Point;
 
 float function(float x) {
-    return sinf(x) + cosf(x);
+    return sinf(5*x);
 }
 
 Point min_max(const Point* points, size_t n) {
@@ -77,6 +77,13 @@ void input_output(NN_Matrix* in, NN_Matrix* out, const Point* points, size_t n){
     out->data = new_out;
 }
 
+void back_and_learn(NN nn, NN gradient, NN_Matrix in, NN_Matrix out, size_t count){
+    for (size_t i = 0; i < count; i++){
+        nn_back_propagation(nn, gradient, in, out);
+        nn_learn(nn, gradient, 1);
+    }
+    printf("%f\n", nn_cost(nn, in, out));
+}
 
 int main(){
     size_t arch[] = {1, 12, 1};
@@ -113,19 +120,15 @@ int main(){
         BeginDrawing();
         ClearBackground(BLACK);
 
-        for (int i = 0; i < 1000; i++) {
-            nn_back_propagation(nn, gradient, in, out);
-            nn_learn(nn, gradient, 1);
-            printf("%f\n", nn_cost(nn, in, out));
-        }
+        back_and_learn(nn, gradient, in, out, 250);
 
         interpolated_points(nn, nn_points, WIDTH);
         normal_function_points(function, a, b, real_points, WIDTH);
 
 
         for (size_t i = 0; i < WIDTH-1; i++) {
-            DrawLine(nn_points[i].x * WIDTH, Y_SCREEN(nn_points[i].y) , nn_points[i+1].x * WIDTH, Y_SCREEN(nn_points[i+1].y), RED);
-            DrawLine(real_points[i].x * WIDTH, Y_SCREEN(real_points[i].y) , real_points[i+1].x * WIDTH, Y_SCREEN(real_points[i+1].y), BLUE);
+            DrawPixel(nn_points[i].x * WIDTH, Y_SCREEN(nn_points[i].y) , RED);
+            DrawPixel(real_points[i].x * WIDTH, Y_SCREEN(real_points[i].y), BLUE);
         }
 
         EndDrawing();
